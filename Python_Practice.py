@@ -37,10 +37,11 @@ while len(party) < partySize:
 
 #Party roster
 print("ROSTER:")
-print("ID   NAME    AGE     EXP")
+print("ID\tNAME\t\tAGE\tEXP")
 print(". . . . .")
 for i in party:
-    print (i.id, i.name, i.familyName, i.age, i.exp)
+    print (str(i.id) + "\t" + str(i.name) + " " + str(i.familyName) + "\t" + str(i.age) + "\t" + str(i.exp))
+
 
 
 #press any key to exit
