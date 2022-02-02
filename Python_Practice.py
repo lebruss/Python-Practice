@@ -3,10 +3,18 @@
 
 import random
 
-characterNames = ['Thomas', 'Richard', 'Patrick', 'Robert', 'Seth', 'Parker', 'Sepp', 'Arvo', 'Kreeta', 'Hans', 'Greeta', 'Peeter', 'Pierre-Luigi', 'Khan']
-familyNames = ['Hansson', 'Schmitt', 'de Groot', 'Jones', 'Blatter', 'Kivisaar']
+characterNames = ['Thomas', 'Richard', 'Patrick', 'Robert', 'Seth', 'Parker', 'Sepp', 'Arvo', 'Kreeta', 'Hans', 'Greeta', 'Peeter', 'Pierre-Luigi', 'Khan', 'Tanja']
+familyNames = ['Hansson', 'Schmitt', 'de Groot', 'Jones', 'Blatter', 'Kivisaar', 'Starman', 'Kebabian', 'Young']
 party = []
-partySize = random.randint(2,5)
+partySize = random.randint(2,6)
+#party coordinates (Party starts at 0,0)
+partyX = 0
+partyY = 0
+partyCoords = (str(partyX) + "," + str(partyY))
+
+#define moving
+def move_forward():
+    pass
 
 class Character:
     isPlayer = 0
@@ -35,15 +43,31 @@ while len(party) < partySize:
     newCharacter.id = len(party) + 1
     party.append(newCharacter)
 
-#Party roster
-print("ROSTER:")
-print("ID\tNAME\t\tAGE\tEXP")
-print(". . . . .")
-for i in party:
-    print (str(i.id) + "\t" + str(i.name) + " " + str(i.familyName) + "\t" + str(i.age) + "\t" + str(i.exp))
 
 
 
+#menu
+while True:
+    #Party roster
+    print("ROSTER:")
+    print("ID\tNAME\t\tAGE\tEXP")
+    print(". . . . .")
+    #print character stats
+    for i in party:
+        print (str(i.id) + "\t" + str(i.name) + " " + str(i.familyName) + "\t" + str(i.age) + "\t" + str(i.exp))
+
+    #print party location
+    print ("Your party is current located at " + partyCoords)
+    print("1. Move forward")
+    print("2. Exit")
+    menuChoice = input()
+    if menuChoice == 1:
+        move_forward()
+        print("Traveling forward...\n")
+    if menuChoice == 2:
+        break
+    else:
+        continue
 #press any key to exit
 print("\n Press any key to exit")
 input()
