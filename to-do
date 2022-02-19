@@ -1,0 +1,29 @@
+Application
+Python
+Text-based
+Player has a character
+Player controls a party / caravan
+Characters have stats
+NPC characters (no AI/dialog)
+(x,y) coordinate system for navigation, and destinations
+You can be a merchant and sell items between towns for money
+You can manage your party's NPCs to do a task for a few days
+Character status / ailments
+Date system (time ticks)
+  week at a time?
+Character level system?
+  general level and skill level
+Time setting
+  Medieval?
+  Hanseatic Estonia?
+List of NPC random first name, last name
+Money
+no quests
+Job title for characters
+make this in Django / ASP / HTML&CSS&JS
+Save file
+Pyinstaller: library lets you make redistributable standalone .exe for python
+Some items have traits like narcotics
+  smuggle between cities
+Roads/highwaymen
+PrettyTable: library for ASCII console text tables. Should use it for the text-based GUI
