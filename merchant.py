@@ -13,6 +13,12 @@ You gotta make money
 Maybe sometimes, an item will not be available in a city. It will then be valuable
 Maybe there will be pirates who attack you while traveling
 Hmm
+Setting:    takes place in Republic of Georgia
+            you start in Kutaisi
+            2023
+money is Georgian lari ₾
+compile the game to an .exe also that lets the user play the game without pre-installed Python
+Don't worry about learning to code, but just learn how to do each thing you want to do
 '''
 
 import time
@@ -30,13 +36,13 @@ print(f"Hello, {name}. Welcome to being a merchant")
 input()
 blankScreen()
 
-currentCity = "Tallinn"
+currentCity = "Kutaisi ქუთაისი"
 
 #menu functions
 def inventory():
     blankScreen()
     print("Inventory")
-    input()
+    time.sleep(1)
 
 #main menu
 while True:
@@ -47,5 +53,5 @@ while True:
     print(f"4. Rest")
     print(f"5. Inventory")
     input = input()
-    if input == "5":
+    if str(input) == "5":
         inventory()
