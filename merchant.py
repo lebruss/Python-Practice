@@ -3,6 +3,7 @@
 #march 11 2023
 
 '''
+use either JSON or .csv to load and save game states, so player can resume from last play
 you are a merchant who buys and sells things
 player has money
 player has a mode of transportation, which can be upgraded
