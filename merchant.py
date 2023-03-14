@@ -37,7 +37,22 @@ print(f"Hello, {name}. Welcome to being a merchant")
 input()
 blankScreen()
 
-currentCity = "Kutaisi ქუთაისი"
+#"City" class
+class City:
+   def __init__(self, name):
+      self.name = name
+#list of Cities
+Kutaisi = City("Kutaisi ქუთაისი")
+currentCity = Kutaisi#starting city is Kutaisi
+
+#"Goods" class
+class Good:
+  def __init__(self, name):
+    self.name = name
+#list of Goods
+tyemali = Good("Tyemali ტყემალი")
+#print(tyemali.name)
+#time.sleep(1)
 
 #menu functions
 def inventory():
@@ -48,11 +63,13 @@ def inventory():
 #main menu
 while True:
     blankScreen()
-    print(f"1. Current city: {currentCity}")
+    print(f"1. Current city: {currentCity.name}")#Print the name of your current city
     print(f"2. Visit market")
     print(f"3. Travel")
     print(f"4. Rest")
     print(f"5. Inventory")
-    input = input()
-    if str(input) == "5":
+    menuChoice = str(input())
+    if menuChoice == "5":
         inventory()
+    else:
+       continue
