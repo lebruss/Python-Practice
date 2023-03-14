@@ -26,9 +26,20 @@ import time
 import random
 import os
 
-#function: clear the terminal screen
+#Functions------------------------------
+#blankScreen(): clear the terminal screen between menu decisions
 def blankScreen():
     os.system('cls||clear')
+
+def inventory():
+    blankScreen()
+    print("Inventory")
+    time.sleep(1)
+
+'''
+if save data exists in current directory: load the variables
+else: give intro with asking name etc.
+'''
 
 name = input('What is your name?')
 
@@ -41,7 +52,7 @@ blankScreen()
 class City:
    def __init__(self, name):
       self.name = name
-#list of Cities
+#list of Cities-------------------------
 Kutaisi = City("Kutaisi ქუთაისი")
 currentCity = Kutaisi#starting city is Kutaisi
 
@@ -49,16 +60,11 @@ currentCity = Kutaisi#starting city is Kutaisi
 class Good:
   def __init__(self, name):
     self.name = name
-#list of Goods
+#list of Goods--------------------------
 tyemali = Good("Tyemali ტყემალი")
 #print(tyemali.name)
 #time.sleep(1)
 
-#menu functions
-def inventory():
-    blankScreen()
-    print("Inventory")
-    time.sleep(1)
 
 #main menu
 while True:
