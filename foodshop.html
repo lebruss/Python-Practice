@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Shop</title>
+</head>
+<body>
+  <h1>Welcome to the Food Shop</h1>
+  <p>Your cash: <span id="cash">100</span></p>
+  <button onclick="buyFood()">Buy Food</button>
+
+  <script>
+    // Initialize variables
+    let cash = 100;
+    const food = {
+      price: 1,
+      inventory: 0,
+    };
+
+    // Function to handle buying food
+    function buyFood() {
+      if (cash >= food.price) {
+        cash -= food.price;
+        food.inventory += 1;
+
+        // Update the displayed cash value
+        const cashSpan = document.getElementById('cash');
+        cashSpan.innerText = cash;
+
+        alert('You bought 1 food. Remaining cash: ' + cash);
+      } else {
+        alert('Not enough cash to buy food.');
+      }
+    }
+  </script>
+</body>
+</html>
